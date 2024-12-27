@@ -1,0 +1,90 @@
+/* .body {
+    background-color: blueviolet;
+    height: 100vh;
+    
+}
+
+.list {
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    transition: color 0.3s, box-shadow 0.3s;
+}
+
+.list:hover {
+    color: #89baa7;
+
+    box-shadow: 0 0 10px rgba(146, 175, 163, 0.8), 0 0 20px rgba(55, 91, 76, 0.6), 0 0 30px rgba(109, 115, 113, 0.4);
+
+} */
+
+.body {
+    background-color: blueviolet;
+    height: 100vh;
+    /* Ensure the body takes the full height of the viewport */
+    overflow: hidden;
+    /* Ensures the glowing effect stays inside the outer div */
+    position: relative;
+}
+
+.list {
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    transition: color 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    /* Keeps the glow effect within the list element */
+}
+
+.list:hover {
+    color: #89baa7;
+    /* Change text color on hover */
+    animation: glowAnimation 1.5s infinite;
+    /* Smooth glowing animation */
+}
+
+/* Circular glowing effect */
+.list::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(146, 175, 163, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0;
+    /* Initially invisible */
+    transition: opacity 0.3s;
+}
+
+.list:hover::before {
+    opacity: 1;
+    /* Glow becomes visible on hover */
+    animation: circularGlow 0.75s linear infinite;
+    /* Circular glow animation */
+    z-index: 100;
+    /* Keep it behind the text */
+}
+
+/* Glow animation from left to right */
+@keyframes circularGlow {
+    0% {
+        transform: translate(-150%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(50%, -50%) scale(1.2);
+    }
+
+    100% {
+        transform: translate(150%, -50%) scale(1);
+    }
+}
