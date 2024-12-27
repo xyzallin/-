@@ -1,0 +1,80 @@
+/* Container for the whole WeatherApp */
+.weather-app {
+    width: 60vw;
+    /* 60% of the viewport width, you can adjust this value */
+    height: 60vh;
+    /* 60% of the viewport height, you can adjust this value */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f0f8ff;
+    /* Light background color */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for a card effect */
+    padding: 20px;
+    overflow: hidden;
+    /* Prevent content overflow */
+    text-align: center;
+    /* Center align the text */
+}
+
+/* Styling for the weather information container */
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the error message */
+.error-message {
+    color: red;
+    /* Red color for error messages */
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Optional: Styling for headings and text */
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #333;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #555;
+}
+
+p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #777;
+}
+
+/* Optional: Styling for responsive design */
+@media (max-width: 768px) {
+    .weather-app {
+        width: 80vw;
+        /* Adjust width on smaller screens */
+        height: 50vh;
+        /* Adjust height on smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
