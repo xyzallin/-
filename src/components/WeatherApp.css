@@ -78,3 +78,58 @@ p {
         font-size: 0.9rem;
     }
 }
+.weather-card {
+    display: flex;
+    /* Enable flexbox for the card layout */
+    justify-content: space-between;
+    /* Space between the text and icon */
+    align-items: center;
+    /* Align items vertically */
+    perspective: 1000px;
+    /* Add perspective for 3D effect */
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    background-color: #282c34;
+    /* Card background */
+    color: white;
+    /* Default text color */
+    border-radius: 16px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Inner padding */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Shadow effect */
+}
+
+.weather-card:hover {
+    transform: rotateX(18deg) rotateY(10deg);
+    /* 3D hover effect */
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack text vertically */
+    text-align: left;
+    /* Align text to the left */
+    gap: 8px;
+    /* Add space between text elements */
+}
+
+.weather-container h1,
+.weather-container h2,
+.weather-container p {
+    margin: 0;
+    /* Remove default margins */
+}
+
+.weather-icon {
+    flex-shrink: 0;
+    /* Prevent the icon from shrinking */
+    width: 80px;
+    /* Set a fixed width */
+    height: 80px;
+    /* Set a fixed height */
+    object-fit: contain;
+    /* Ensure the image scales properly */
+}
