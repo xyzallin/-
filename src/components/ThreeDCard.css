@@ -42,6 +42,7 @@ img {
 .card-body-small {
     width: 12vh;
     margin-top: 25px;
+    gap: 16px;
     /* Smaller width */
 }
 .card-body-small:hover{

@@ -80,7 +80,7 @@ import WeatherApp from "./components/WeatherApp";
 import Sidebar from "./components/sidebar";
 
 // import WeatherForecastSlider from "./components/WeatherForcatSlider";
-import WeatherForcast from "./components/WeatherForcast";
+import WeatherForecastSlider from "./components/WeatherForcastSlider";
 
 function App() {
   const [searchCity, setSearchCity] = useState("Madrid"); // Default city
@@ -94,7 +94,7 @@ function App() {
     <>
       <SearchBar placeholder="Search for cities" onSearch={handleSearch} />
       <WeatherApp city={searchCity} />
-      <WeatherForcast />
+      <WeatherForecastSlider lat={40.4165} lon={-3.7026} />
       <Sidebar />
     </>
   );

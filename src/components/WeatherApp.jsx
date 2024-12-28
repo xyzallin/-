@@ -104,7 +104,6 @@ function WeatherApp({ city }) {
                 >
                   <div style={{ top: "-10px" }}>
                     <h2 className="text-2xl font-bold">{weather.name}</h2>
-                    {console.log(weather)}
                     <p>Chance of rain: {weather.clouds.all}%</p>
                   </div>
                 </motion.div>
