@@ -17,18 +17,7 @@ img {
     border-radius: 8px;
 }
 
-.card-container {
-    /* Container for the 3D card */
-    display: flex;
-    justify-content: flex-start;
-    /* Align content horizontally */
-    align-items: flex-start;
-    /* Align content vertically */
-    min-height: 100vh;
-    /* Full height of the viewport */
-    background-color: #000000;
-    /* Static background color */
-}
+
 
 .card-body {
     /* The card body styling */
@@ -42,13 +31,25 @@ img {
     /* Padding inside the card */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     /* Shadow effect */
-    width: 84vh;
+    width: 82vh;
     /* Fixed width */
-    height: 35vh;
+    height: 19vh;
     /* Fixed height */
     margin-left: 100px;
-    margin-top: 90px;
+    margin-top: 80px;
 }
+
+.card-body-small {
+    width: 12vh;
+    margin-top: 25px;
+    /* Smaller width */
+}
+.card-body-small:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+        /* 3D rotation on hover */
+}
+
 
 .card-item {
     /* Styling for individual items in the card */
