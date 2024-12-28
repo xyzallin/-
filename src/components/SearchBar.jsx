@@ -79,7 +79,9 @@ function SearchBar({ placeholder, onSearch }) {
   const handleKeyPress = (e) => {
     if (e.key === "Enter" && onSearch) {
       // Trigger search only when Enter is pressed
+
       onSearch(inputValue);
+      setInputValue("");
     }
   };
 

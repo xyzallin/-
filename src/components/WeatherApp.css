@@ -43,18 +43,18 @@
 h1 {
     font-size: 2.5rem;
     margin: 0;
-    color: #333;
+    color: #ffffff;
 }
 
 h2 {
     font-size: 2rem;
-    color: #555;
+    color: #ffffff;
 }
 
 p {
     font-size: 1rem;
     margin: 5px 0;
-    color: #777;
+    color: #ffffff;
 }
 
 /* Optional: Styling for responsive design */
@@ -76,5 +76,105 @@ p {
 
     p {
         font-size: 0.9rem;
+    }
+}
+.weather-card {
+    display: flex;
+    /* Enable flexbox for the card layout */
+    justify-content: space-between;
+    /* Space between the text and icon */
+    align-items: center;
+    /* Align items vertically */
+    perspective: 1000px;
+    /* Add perspective for 3D effect */
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    background-color: #282c34;
+    /* Card background */
+    color: white;
+    /* Default text color */
+    border-radius: 16px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Inner padding */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Shadow effect */
+}
+
+.weather-card:hover {
+    transform: rotateX(18deg) rotateY(10deg);
+    /* 3D hover effect */
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack text vertically */
+    text-align: left;
+    /* Align text to the left */
+    gap: 8px;
+    /* Add space between text elements */
+}
+
+.weather-container h1,
+.weather-container h2,
+.weather-container p {
+    margin: 0;
+    /* Remove default margins */
+}
+
+.weather-icon {
+    flex-shrink: 0;
+    /* Prevent the icon from shrinking */
+    width: 800px;
+    /* Set a fixed width */
+    height: 80px;
+    /* Set a fixed height */
+    object-fit: contain;
+    /* Ensure the image scales properly */
+}
+.loader {
+    --s: 20px;
+
+    --_d: calc(0.353*var(--s));
+    width: calc(var(--s) + var(--_d));
+    aspect-ratio: 1;
+    display: grid;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    grid-area: 1/1;
+    clip-path: polygon(var(--_d) 0, 100% 0, 100% calc(100% - var(--_d)), calc(100% - var(--_d)) 100%, 0 100%, 0 var(--_d));
+    background:
+        conic-gradient(from -90deg at calc(100% - var(--_d)) var(--_d),
+            #fff 135deg, #666 0 270deg, #aaa 0);
+    animation: l6 2s infinite;
+}
+
+.loader:after {
+    animation-delay: -1s;
+}
+
+@keyframes l6 {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    25% {
+        transform: translate(30px, 0)
+    }
+
+    50% {
+        transform: translate(30px, 30px)
+    }
+
+    75% {
+        transform: translate(0, 30px)
+    }
+
+    100% {
+        transform: translate(0, 0)
     }
 }
