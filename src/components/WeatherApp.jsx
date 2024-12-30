@@ -5,13 +5,12 @@ import { motion } from "framer-motion";
 import detective_animation_404_error_page from "../detective-animation-404-error-page.gif";
 // import { CircleLoader } from "react-awesome-loaders";
 
-function WeatherApp({ city }) {
+function WeatherApp({ city, updateCoordinates }) {
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false); // New loading state
 
   const apiKey = "493ba78095c9ef2b8abe4963f67999ed";
-
   // Function to fetch weather data
   const fetchWeather = async (cityName) => {
     setLoading(true); // Set loading state to true while fetching
@@ -27,7 +26,9 @@ function WeatherApp({ city }) {
 
       const data = await response.json();
       setWeather(data);
-      console.log(data);
+      if (data.coord) {
+        updateCoordinates(data.coord.lat, data.coord.lon);
+      }
     } catch (err) {
       setError(err.message);
       setWeather(null); // Clear weather data if there's an error

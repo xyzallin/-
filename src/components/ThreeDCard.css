@@ -1,74 +1,81 @@
 .weather-card {
-    perspective: 1000px;
-    /* Add perspective for 3D effect */
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease;
+  perspective: 1000px;
+  /* Add perspective for 3D effect */
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
 }
 
 .weather-card:hover {
-    transform: rotateX(10deg) rotateY(10deg);
+  transform: rotateX(10deg) rotateY(10deg);
 }
 
 .weather-container {
-    text-align: center;
+  text-align: center;
 }
 
 img {
-    border-radius: 8px;
+  border-radius: 8px;
 }
 
-
-
 .card-body {
-    /* The card body styling */
-    background-color: #23272e;
-    /* Static dark background for the card */
-    color: white;
-    /* Text color */
-    border-radius: 16px;
-    /* Rounded corners */
-    padding: 40px;
-    /* Padding inside the card */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* Shadow effect */
-    width: 82vh;
-    /* Fixed width */
-    height: 19vh;
-    /* Fixed height */
-    margin-left: 100px;
-    margin-top: 80px;
+  /* The card body styling */
+  background-color: #23272e;
+  /* Static dark background for the card */
+  color: white;
+  /* Text color */
+  border-radius: 16px;
+  /* Rounded corners */
+  padding: 40px;
+  /* Padding inside the card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Shadow effect */
+  width: 82vh;
+  /* Fixed width */
+  height: 19vh;
+  /* Fixed height */
+  margin-left: 100px;
+  margin-top: 80px;
 }
 
 .card-body-small {
-    width: 12vh;
-    margin-top: 25px;
-    gap: 16px;
-    /* Smaller width */
+  width: 12vh;
+  margin-top: 25px;
+  gap: 16px;
+  margin-left: 1px;
+  /* Smaller width */
 }
-.card-body-small:hover{
-    transform: translateY(-15px);
-    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
-        /* 3D rotation on hover */
+.card-body-small-wider {
+  width: 84vh;
+  height: 5vh;
+  margin-top: 25px;
+  gap: 16px;
+  margin-left: 40px;
+  margin-bottom: -19px;
+  /* Smaller width */
 }
-
+.card-body-small:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+  /* 3D rotation on hover */
+}
 
 .card-item {
-    /* Styling for individual items in the card */
-    text-align: center;
-    /* Center-align text */
-    color: #4fa7db;
-    /* Green text */
-    font-size: 18px;
-    /* Adjust font size */
-    margin-bottom: 10px;
-    /* Spacing between items */
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    /* Smooth hover effect */
+  /* Styling for individual items in the card */
+  text-align: center;
+  /* Center-align text */
+  color: #4fa7db;
+  /* Green text */
+  font-size: 18px;
+  /* Adjust font size */
+  margin-bottom: 10px;
+  /* Spacing between items */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  /* Smooth hover effect */
 }
 
 .card-item:hover {
-    transform: translateZ(10px) scale(1.05);
-    /* Lift and scale effect */
-    background-color: #558bac;
-    /* Light blue background on hover */
+  transform: translateZ(10px) scale(1.05);
+  /* Lift and scale effect */
+  background-color: #558bac;
+  /* Light blue background on hover */
 }

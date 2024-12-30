@@ -1,180 +1,190 @@
 /* Container for the whole WeatherApp */
 .weather-app {
-    width: 60vw;
-    /* 60% of the viewport width, you can adjust this value */
-    height: 60vh;
-    /* 60% of the viewport height, you can adjust this value */
+  width: 60vw;
+  /* 60% of the viewport width, you can adjust this value */
+  height: 60vh;
+  /* 60% of the viewport height, you can adjust this value */
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    background-color: #f0f8ff;
-    /* Light background color */
-    border-radius: 8px;
-    /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* Soft shadow for a card effect */
-    padding: 20px;
-    overflow: hidden;
-    /* Prevent content overflow */
-    text-align: center;
-    /* Center align the text */
+  background-color: #f0f8ff;
+  /* Light background color */
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for a card effect */
+  padding: 20px;
+  overflow: hidden;
+  /* Prevent content overflow */
+  text-align: center;
+  /* Center align the text */
 }
 
 /* Styling for the weather information container */
 .weather-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Styling for the error message */
 .error-message {
-    color: red;
-    /* Red color for error messages */
-    font-size: 1.2rem;
-    margin-top: 10px;
+  color: red;
+  /* Red color for error messages */
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 
 /* Optional: Styling for headings and text */
 h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    color: #ffffff;
+  font-size: 2.5rem;
+  margin: 0;
+  color: #ffffff;
 }
 
 h2 {
-    font-size: 2rem;
-    color: #ffffff;
+  font-size: 2rem;
+  color: #ffffff;
 }
 
 p {
-    font-size: 1rem;
-    margin: 5px 0;
-    color: #ffffff;
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #ffffff;
 }
 
 /* Optional: Styling for responsive design */
 @media (max-width: 768px) {
-    .weather-app {
-        width: 80vw;
-        /* Adjust width on smaller screens */
-        height: 50vh;
-        /* Adjust height on smaller screens */
-    }
+  .weather-app {
+    width: 80vw;
+    /* Adjust width on smaller screens */
+    height: 50vh;
+    /* Adjust height on smaller screens */
+  }
 
-    h1 {
-        font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    h2 {
-        font-size: 1.8rem;
-    }
+  h2 {
+    font-size: 1.8rem;
+  }
 
-    p {
-        font-size: 0.9rem;
-    }
+  p {
+    font-size: 0.9rem;
+  }
 }
 .weather-card {
-    display: flex;
-    /* Enable flexbox for the card layout */
-    justify-content: space-between;
-    /* Space between the text and icon */
-    align-items: center;
-    /* Align items vertically */
-    perspective: 1000px;
-    /* Add perspective for 3D effect */
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease;
-    background-color: #282c34;
-    /* Card background */
-    color: white;
-    /* Default text color */
-    border-radius: 16px;
-    /* Rounded corners */
-    padding: 20px;
-    /* Inner padding */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* Shadow effect */
+  display: flex;
+  /* Enable flexbox for the card layout */
+  justify-content: space-between;
+  /* Space between the text and icon */
+  align-items: center;
+  /* Align items vertically */
+  perspective: 1000px;
+  /* Add perspective for 3D effect */
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  background-color: #282c34;
+  /* Card background */
+  color: white;
+  /* Default text color */
+  border-radius: 16px;
+  /* Rounded corners */
+  padding: 20px;
+  /* Inner padding */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Shadow effect */
 }
 
 .weather-card:hover {
-    transform: rotateX(18deg) rotateY(10deg);
-    /* 3D hover effect */
+  transform: rotateX(18deg) rotateY(10deg);
+  /* 3D hover effect */
 }
 
 .weather-container {
-    display: flex;
-    flex-direction: column;
-    /* Stack text vertically */
-    text-align: left;
-    /* Align text to the left */
-    gap: 8px;
-    /* Add space between text elements */
+  display: flex;
+  flex-direction: column;
+  /* Stack text vertically */
+  text-align: left;
+  /* Align text to the left */
+  gap: 8px;
+  /* Add space between text elements */
 }
 
 .weather-container h1,
 .weather-container h2,
 .weather-container p {
-    margin: 0;
-    /* Remove default margins */
+  margin: 0;
+  /* Remove default margins */
 }
 
 .weather-icon {
-    flex-shrink: 0;
-    /* Prevent the icon from shrinking */
-    width: 800px;
-    /* Set a fixed width */
-    height: 80px;
-    /* Set a fixed height */
-    object-fit: contain;
-    /* Ensure the image scales properly */
+  flex-shrink: 0;
+  /* Prevent the icon from shrinking */
+  width: 800px;
+  /* Set a fixed width */
+  height: 80px;
+  /* Set a fixed height */
+  object-fit: contain;
+  /* Ensure the image scales properly */
 }
 .loader {
-    --s: 20px;
+  --s: 20px;
 
-    --_d: calc(0.353*var(--s));
-    width: calc(var(--s) + var(--_d));
-    aspect-ratio: 1;
-    display: grid;
+  --_d: calc(0.353 * var(--s));
+  width: calc(var(--s) + var(--_d));
+  aspect-ratio: 1;
+  display: grid;
 }
 
 .loader:before,
 .loader:after {
-    content: "";
-    grid-area: 1/1;
-    clip-path: polygon(var(--_d) 0, 100% 0, 100% calc(100% - var(--_d)), calc(100% - var(--_d)) 100%, 0 100%, 0 var(--_d));
-    background:
-        conic-gradient(from -90deg at calc(100% - var(--_d)) var(--_d),
-            #fff 135deg, #666 0 270deg, #aaa 0);
-    animation: l6 2s infinite;
+  content: "";
+  grid-area: 1/1;
+  clip-path: polygon(
+    var(--_d) 0,
+    100% 0,
+    100% calc(100% - var(--_d)),
+    calc(100% - var(--_d)) 100%,
+    0 100%,
+    0 var(--_d)
+  );
+  background: conic-gradient(
+    from -90deg at calc(100% - var(--_d)) var(--_d),
+    #fff 135deg,
+    #666 0 270deg,
+    #aaa 0
+  );
+  animation: l6 2s infinite;
 }
 
 .loader:after {
-    animation-delay: -1s;
+  animation-delay: -1s;
 }
 
 @keyframes l6 {
-    0% {
-        transform: translate(0, 0)
-    }
+  0% {
+    transform: translate(0, 0);
+  }
 
-    25% {
-        transform: translate(30px, 0)
-    }
+  25% {
+    transform: translate(30px, 0);
+  }
 
-    50% {
-        transform: translate(30px, 30px)
-    }
+  50% {
+    transform: translate(30px, 30px);
+  }
 
-    75% {
-        transform: translate(0, 30px)
-    }
+  75% {
+    transform: translate(0, 30px);
+  }
 
-    100% {
-        transform: translate(0, 0)
-    }
+  100% {
+    transform: translate(0, 0);
+  }
 }
