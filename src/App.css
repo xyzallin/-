@@ -35,3 +35,69 @@
     transform: rotate(360deg);
   }
 }
+
+@import url("https://fonts.googleapis.com/css?family=Lato:100&display=swap");
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  width: 180px;
+  height: 60px;
+  position: absolute;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #9b9ea0;
+  outline: none;
+  position: relative;
+  transition: 1s ease-in-out;
+}
+
+.btn svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #000000;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  background: #e2d39c;
+  border-radius: 75px;
+  color: blueviolet;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: rgb(238, 219, 106);
+  font-size: 18px;
+  font-weight: 100;
+  z-index: 1; /* Ensures the text stays above the svg */
+}
+
+/* Add additional styling to your button if needed */
+.btn h5 {
+  color: #e2d39c;
+  font-size: 18px;
+  margin: 0;
+}

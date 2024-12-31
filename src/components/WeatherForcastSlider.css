@@ -68,7 +68,7 @@
   animation: l6 2s infinite;
   position: absolute;
   top: 58vh; /* Distance from the top */
-  right: 158vh; /* Distance from the right */
+  right: 150vh; /* Distance from the right */
 }
 
 @keyframes l6 {

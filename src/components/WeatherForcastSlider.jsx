@@ -39,7 +39,7 @@ const WeatherForecastSlider = ({ lat, lon }) => {
       setError(err.message);
       setHourlyForecast([]);
     } finally {
-      setloading(true);
+      setloading(false);
     }
   };
 
@@ -61,8 +61,8 @@ const WeatherForecastSlider = ({ lat, lon }) => {
 
   return (
     <div className="forecast-slider">
-      {error && <p className="error-message text-red-500">{error}</p>}
-      {loading && <div class="hourloader"></div>}
+      {error && <p className="error-message text-red-500">WTF</p>}
+      {loading && !error && <div class="hourloader"></div>}
 
       {hourlyForecast.length > 0 && (
         <div
